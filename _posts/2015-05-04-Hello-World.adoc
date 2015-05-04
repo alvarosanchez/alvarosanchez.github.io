@@ -1,3 +1,8 @@
 = Hello World
+:hp-tags: Personal
 
-So I have decided to start a (new) blog. It's new, because I already []
+So I have decided to start (yet another) blog. I already https://web.archive.org/web/20081014060148/http://weblogs.javahispano.org/page/mariscal/[used to have a blog 12 years ago], but after 3 years blogging, I abandoned it.
+
+However, recently I came across http://hubpress.io/[Hubpress], and my reaction was like _"a blogging system powered by GitHub and AsciiDoctor? Fuck yes! I have to try that"_.
+
+So here I am, again :-). Hello World!
