@@ -16,7 +16,6 @@ import org.jsoup.nodes.Document
 
 import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.time.ZoneId
 
 def conf = new JsonSlurper().parse(new File('hubpress/config.json'))
 
@@ -59,7 +58,7 @@ new File('2015').eachFileRecurse(FileType.FILES) { File post ->
 
 feed.entries = entries
 
-Writer writer = new FileWriter('feed.xml');
+Writer writer = new FileWriter('rss');
 SyndFeedOutput output = new SyndFeedOutput()
 output.output(feed,writer)
 writer.close()
