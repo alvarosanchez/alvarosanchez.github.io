@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Learning from life</title>
+    <link>https://alvarosanchez.github.io</link>
+    <description>A blog by Álvaro Sánchez-Mariscal</description>
+    <language>en-UK</language>
+    <pubDate>Tue, 05 May 2015 15:57:05 GMT</pubDate>
+    <dc:creator>alvaro.sanchezmariscal@gmail.com</dc:creator>
+    <dc:date>2015-05-05T15:57:05Z</dc:date>
+    <dc:language>en-UK</dc:language>
+    <item>
+      <title>Hello, World!</title>
+      <link>https://alvarosanchez.github.io/2015/05/04/Hello-World.html</link>
+      <description>So I have decided to start (yet another) blog. I already used to have a blog 12 years ago, but after 3 years blogging, I abandoned it. However, recently I came across Hubpress, and my reaction was like "a blogging...</description>
+      <category>Personal</category>
+      <pubDate>Sun, 03 May 2015 20:00:00 GMT</pubDate>
+      <guid>https://alvarosanchez.github.io/2015/05/04/Hello-World.html</guid>
+      <dc:date>2015-05-03T20:00:00Z</dc:date>
+    </item>
+  </channel>
+</rss>
