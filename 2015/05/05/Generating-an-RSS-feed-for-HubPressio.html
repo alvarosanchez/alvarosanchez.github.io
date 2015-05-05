@@ -23,7 +23,7 @@
     <meta property="og:description" content="The first problem I found when using HubPress.io was that it doesn&amp;#8217;t support RSS feeds yet. So my first choice was to use a service like Feed 43, and it works. But that service (an others similar)..." />
     <meta property="og:url" content="https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html" />
     <meta property="article:published_time" content="2015-05-04T22:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-05-05T16:21:04.540Z" />
+    <meta property="article:modified_time" content="2015-05-05T17:58:57.598Z" />
     <meta property="article:tag" content="HubPress" />
     
     <meta name="twitter:card" content="summary" />
@@ -46,7 +46,7 @@
     "headline": "Generating an RSS feed for HubPress.io",
     "url": "https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html",
     "datePublished": "2015-05-04T22:00:00.000Z",
-    "dateModified": "2015-05-05T16:21:04.540Z",
+    "dateModified": "2015-05-05T17:58:57.598Z",
     "keywords": "HubPress",
     "description": "The first problem I found when using HubPress.io was that it doesn&amp;#8217;t support RSS feeds yet. So my first choice was to use a service like Feed 43, and it works. But that service (an others similar)..."
 }
@@ -120,6 +120,7 @@ import org.jsoup.nodes.Document
 
 import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.time.ZoneId
 
 def conf = new JsonSlurper().parse(new File('hubpress/config.json'))
 
@@ -136,6 +137,7 @@ feed.with {
 
 List&lt;SyndEntry&gt; entries = []
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+df.setTimeZone(TimeZone.getTimeZone('GMT-2'))
 
 new File('2015').eachFileRecurse(FileType.FILES) { File post -&gt;
     SyndEntry entry = new SyndEntryImpl()
@@ -148,8 +150,7 @@ new File('2015').eachFileRecurse(FileType.FILES) { File post -&gt;
         title = document.getElementsByTag('meta').find { it.attr('property') == 'og:title' }.attr('content')
         link = document.getElementsByTag('meta').find { it.attr('property') == 'og:url' }.attr('content')
         description = syndDescription
-        publishedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:published_time' }.attr('content'))
-        updatedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:modified_time' }.attr('content'))
+        publishedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:modified_time' }.attr('content'))
         categories = document.getElementsByTag('meta').find { it.attr('property') == 'article:tag' }.attr('content').tokenize('').collect {String tag -&gt;
             SyndCategory category = new SyndCategoryImpl()
             category.name = tag
@@ -179,7 +180,10 @@ writer.close()</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Then your feed will be available at <code><a href="http://&lt;REPO&gt;.github.io/feed.xml" class="bare">http://&lt;REPO&gt;.github.io/feed.xml</a></code>, in my case, <a href="http://alvarosanchez.github.io/feed.xml" class="bare">http://alvarosanchez.github.io/feed.xml</a></p>
+<p>Then your feed will be available at <code><a href="http://&lt;REPO&gt;.github.io/feed.xml" class="bare">http://&lt;REPO&gt;.github.io/feed.xml</a></code>, in my case, <a href="http://alvarosanchez.github.io/feed.xml" class="bare">http://alvarosanchez.github.io/feed.xml</a>.</p>
+</div>
+<div class="paragraph">
+<p>The script speaks by itself, and should work by default, but feel free to modify it.</p>
 </div>
         </section>
 
