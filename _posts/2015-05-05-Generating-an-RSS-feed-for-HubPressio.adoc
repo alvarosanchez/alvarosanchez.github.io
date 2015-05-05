@@ -1,5 +1,6 @@
 = Generating an RSS feed for HubPress.io
 :hp-tags: HubPress
+:source-highlighter: prettify
 
 The first problem I found when using http://hubpress.io/[HubPress.io] was that https://github.com/HubPress/hubpress.io/issues/49[it doesn't support RSS feeds] yet. So my first choice was to use a service like http://feed43.com/[Feed 43], and it works. But that service (an others similar) has the limitation of checking the original site every 6 hours. It's also very fragile because it crawls the home page for posts.
 
@@ -9,6 +10,7 @@ So I decided to create a http://groovy-lang.org[Groovy script] to read the gener
 
 * Install Groovy. The easiest way is to use http://gvmtool.net/[GVM].
 * Go to the master branch of your site repo and create this file:   
+
 [source,groovy]
 .generateFeed.groovy
 ----
