@@ -85,3 +85,10 @@ writer.close()
 Then your feed will be available at `http://<REPO>.github.io/rss`, in my case, http://alvarosanchez.github.io/rss.
 
 The script speaks by itself, and should work by default, but feel free to modify it.
+
+The final flow to update the feed is the following:
+
+1. Write a post from the web interface and publish it.
+2. `git pull origin master` to fetch the generated HTML files.
+3. `groovy generateFeed.groovy` to generate the updated RSS feed.
+4. `git add rss && git commit -m "Updated feed" && git push origin master` to publish the feed.
