@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Generating an RSS feed for HubPress.io</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//alvarosanchez.github.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//alvarosanchez.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html" />
+    
+    <meta property="og:site_name" content="Learning from life" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generating an RSS feed for HubPress.io" />
+    <meta property="og:description" content="The first problem I found when using HubPress.io was that it doesn&amp;#8217;t support RSS feeds yet. So my first choice was to use a service like Feed 43, and it works. But that service (an others similar)..." />
+    <meta property="og:url" content="https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html" />
+    <meta property="article:published_time" content="2015-05-04T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-05-05T16:21:04.540Z" />
+    <meta property="article:tag" content="HubPress" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Generating an RSS feed for HubPress.io" />
+    <meta name="twitter:description" content="The first problem I found when using HubPress.io was that it doesn&amp;#8217;t support RSS feeds yet. So my first choice was to use a service like Feed 43, and it works. But that service (an others similar)..." />
+    <meta name="twitter:url" content="https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Learning from life",
+    "author": {
+        "@type": "Person",
+        "name": "Álvaro Sánchez-Mariscal",
+        "image": "https://avatars.githubusercontent.com/u/153880?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "https://es.linkedin.com/in/mariscal"
+    },
+    "headline": "Generating an RSS feed for HubPress.io",
+    "url": "https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html",
+    "datePublished": "2015-05-04T22:00:00.000Z",
+    "dateModified": "2015-05-05T16:21:04.540Z",
+    "keywords": "HubPress",
+    "description": "The first problem I found when using HubPress.io was that it doesn&amp;#8217;t support RSS feeds yet. So my first choice was to use a service like Feed 43, and it works. But that service (an others similar)..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Learning from life" href="https://alvarosanchez.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-HubPress">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://alvarosanchez.github.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://alvarosanchez.github.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-HubPress">
+
+        <header class="post-header">
+            <h1 class="post-title">Generating an RSS feed for HubPress.io</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-05-05">05 May 2015</time>  on <a href="https://alvarosanchez.github.io/tag/HubPress">HubPress</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="paragraph">
+<p>The first problem I found when using <a href="http://hubpress.io/">HubPress.io</a> was that <a href="https://github.com/HubPress/hubpress.io/issues/49">it doesn&#8217;t support RSS feeds</a> yet. So my first choice was to use a service like <a href="http://feed43.com/">Feed 43</a>, and it works. But that service (an others similar) has the limitation of checking the original site every 6 hours. It&#8217;s also very fragile because it crawls the home page for posts.</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;m using also <a href="https://zapier.com">Zapier</a> for posting to Twitter and Facebook when a new entry is found on the RSS, so with checking every 6 hours it could happen that my posts were going to be published during the night. I know I could have used <a href="https://buffer.com/">Buffer</a> instead, to schedule the publishing at the times I wanted, but being a developer has to be an advantage in your life.</p>
+</div>
+<div class="paragraph">
+<p>So I decided to create a <a href="http://groovy-lang.org">Groovy script</a> to read the generated HTML output by HubPress, and write an RSS feed to a file that then is pushed to GitHub. If you are using HubPress and want to use this approach, those are the steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install Groovy. The easiest way is to use <a href="http://gvmtool.net/">GVM</a>.</p>
+</li>
+<li>
+<p>Go to the master branch of your site repo and create this file:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">generateFeed.groovy</div>
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">@Grab('com.rometools:rome:1.5.0')
+@Grab('org.jsoup:jsoup:1.8.2')
+import com.rometools.rome.feed.synd.SyndCategory
+import com.rometools.rome.feed.synd.SyndCategoryImpl
+import com.rometools.rome.feed.synd.SyndContent
+import com.rometools.rome.feed.synd.SyndContentImpl
+import com.rometools.rome.feed.synd.SyndEntry
+import com.rometools.rome.feed.synd.SyndEntryImpl
+import com.rometools.rome.feed.synd.SyndFeed
+import com.rometools.rome.feed.synd.SyndFeedImpl
+import com.rometools.rome.io.SyndFeedOutput
+import groovy.io.FileType
+import groovy.json.JsonSlurper
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
+
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+def conf = new JsonSlurper().parse(new File('hubpress/config.json'))
+
+SyndFeed feed = new SyndFeedImpl()
+feed.with {
+    title = conf.site.title
+    link = conf.site.url
+    description = conf.site.description
+    feedType = 'rss_2.0'
+    author = conf.socialnetwork.email
+    publishedDate = new Date()
+    language = 'en-UK'
+}
+
+List&lt;SyndEntry&gt; entries = []
+DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+
+new File('2015').eachFileRecurse(FileType.FILES) { File post -&gt;
+    SyndEntry entry = new SyndEntryImpl()
+    Document document = Jsoup.parse(post, 'UTF-8')
+
+    SyndContent syndDescription = new SyndContentImpl()
+    syndDescription.value = document.getElementsByTag('meta').find { it.attr('property') == 'og:description' }.attr('content')
+
+    entry.with {
+        title = document.getElementsByTag('meta').find { it.attr('property') == 'og:title' }.attr('content')
+        link = document.getElementsByTag('meta').find { it.attr('property') == 'og:url' }.attr('content')
+        description = syndDescription
+        publishedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:published_time' }.attr('content'))
+        updatedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:modified_time' }.attr('content'))
+        categories = document.getElementsByTag('meta').find { it.attr('property') == 'article:tag' }.attr('content').tokenize('').collect {String tag -&gt;
+            SyndCategory category = new SyndCategoryImpl()
+            category.name = tag
+            return category
+        }
+    }
+
+    entries &lt;&lt; entry
+}
+
+feed.entries = entries
+
+Writer writer = new FileWriter('feed.xml');
+SyndFeedOutput output = new SyndFeedOutput()
+output.output(feed,writer)
+writer.close()</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Generate the RSS feed: <code>groovy generateFeed.groovy</code></p>
+</li>
+<li>
+<p>Add the resulting file to the repo: <code>git add feed.xml &amp;&amp; git commit -m "Updated feed" &amp;&amp; git push origin master</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then your feed will be available at <code><a href="http://&lt;REPO&gt;.github.io/feed.xml" class="bare">http://&lt;REPO&gt;.github.io/feed.xml</a></code>, in my case, <a href="http://alvarosanchez.github.io/feed.xml" class="bare">http://alvarosanchez.github.io/feed.xml</a></p>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/153880?v=3)"><span class="hidden">Álvaro Sánchez-Mariscal's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Álvaro Sánchez-Mariscal</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Madrid</span>
+                    <span class="author-link icon-link"><a href="https://es.linkedin.com/in/mariscal">https://es.linkedin.com/in/mariscal</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Generating%20an%20RSS%20feed%20for%20HubPress.io&amp;url=https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alvarosanchez.github.io/2015/05/05/Generating-an-RSS-feed-for-HubPressio.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'learningfromlife'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://alvarosanchez.github.io">Learning from life</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alvarosanchez.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//alvarosanchez.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62582640-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
