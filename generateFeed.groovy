@@ -16,6 +16,7 @@ import org.jsoup.nodes.Document
 
 import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.time.ZoneId
 
 def conf = new JsonSlurper().parse(new File('hubpress/config.json'))
 
@@ -32,6 +33,7 @@ feed.with {
 
 List<SyndEntry> entries = []
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+df.setTimeZone(TimeZone.getTimeZone('GMT-2'))
 
 new File('2015').eachFileRecurse(FileType.FILES) { File post ->
     SyndEntry entry = new SyndEntryImpl()
@@ -44,8 +46,7 @@ new File('2015').eachFileRecurse(FileType.FILES) { File post ->
         title = document.getElementsByTag('meta').find { it.attr('property') == 'og:title' }.attr('content')
         link = document.getElementsByTag('meta').find { it.attr('property') == 'og:url' }.attr('content')
         description = syndDescription
-        publishedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:published_time' }.attr('content'))
-        updatedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:modified_time' }.attr('content'))
+        publishedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:modified_time' }.attr('content'))
         categories = document.getElementsByTag('meta').find { it.attr('property') == 'article:tag' }.attr('content').tokenize('').collect {String tag ->
             SyndCategory category = new SyndCategoryImpl()
             category.name = tag
