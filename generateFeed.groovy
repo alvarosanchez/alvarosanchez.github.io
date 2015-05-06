@@ -46,7 +46,7 @@ new File('2015').eachFileRecurse(FileType.FILES) { File post ->
         link = document.getElementsByTag('meta').find { it.attr('property') == 'og:url' }.attr('content')
         description = syndDescription
         publishedDate = df.parse(document.getElementsByTag('meta').find { it.attr('property') == 'article:modified_time' }.attr('content'))
-        categories = document.getElementsByTag('meta').find { it.attr('property') == 'article:tag' }.attr('content').tokenize('').collect {String tag ->
+        categories = document.getElementsByTag('meta').findAll { it.attr('property') == 'article:tag' }*.attr('content').collect {String tag ->
             SyndCategory category = new SyndCategoryImpl()
             category.name = tag
             return category
@@ -56,7 +56,7 @@ new File('2015').eachFileRecurse(FileType.FILES) { File post ->
     entries << entry
 }
 
-feed.entries = entries
+feed.entries = entries.sort { it.publishedDate }.reverse()
 
 Writer writer = new FileWriter('rss');
 SyndFeedOutput output = new SyndFeedOutput()
