@@ -1,0 +1,19 @@
+= Speaking at GeeCON 2015 about Ratpack
+:hp-tags: Conferences, GeeCON
+
+image::http://geecon2015.s3.amazonaws.com/geecon_banner_speaker.jpg[link="http://2015.geecon.org/"]
+
+http://2015.geecon.org/[GeeCON] is probably one of the Top 5 JVM conferences in Europe, with http://2015.geecon.org/about/[2,000+ attendees]. I have the pleasure to be http://2015.geecon.org/speakers/info.html?id=44[speaking at this year's edition] about http://ratpack.io/[Ratpack], a set of Java 8 libraries to build simple yet powerful HTTP applications. My session is in fact the companion talk of the https://github.com/alvarosanchez/ratpack-101[Ratpack 101] workshop that I delivered at http://www.springio.net/ratpack-101-workshop/[Spring I/O] in Barcelona.
+
+But apart from speaking, I will enjoy the rest of the conference (as I normally do every time I speak at an event). I'm really excited to hear from industry experts about the following topics:
+
+* JDK 9.
+* Reactive programming.
+* JSR 354 (Money and Currency API).
+* HTTP 2.0.
+* Consumer driven contracts.
+* Apache Spark.
+* Scala.
+* Go.
+
+If you are around and see me, don't doubt and say hi :)
