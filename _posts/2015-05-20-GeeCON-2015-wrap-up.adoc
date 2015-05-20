@@ -1,5 +1,35 @@
-= #GeeCON 2015 wrap up
+= #GeeCON 2015 wrap-up
 
 :hp-tags: Conferences, GeeCON
 
-image::geecon.jpg[]
+image::geecon.jpg[width="000"]
+
+Last week I had the pleasure to speak at and attend to the amazing http://2015.geecon.org/[GeeCON 2015] in Krakow, Poland.
+
+== The venue
+
+++++
+<blockquote class="twitter-tweet" lang="es"><p lang="en" dir="ltr">Packed room for <a href="https://twitter.com/rafaelcodes">@rafaelcodes</a> and <a href="https://twitter.com/hashtag/Java?src=hash">#Java</a> <a href="https://twitter.com/hashtag/bytecode?src=hash">#bytecode</a> ramblings at <a href="https://twitter.com/GeeCON">@GeeCON</a> <a href="http://t.co/BJrlYACrbM">pic.twitter.com/BJrlYACrbM</a></p>&mdash; Markus Eisele (@myfear) <a href="https://twitter.com/myfear/status/599137779692523520">Mayo 15, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+++++
+
+The conference took place in http://multikino.pl/[Multikino] Cinema, so you can imagine massively big rooms, immense display sizes... To me, it's been one of the most impressive locations together with http://www.phantasialand.de/en/home[Phantasialand] for http://www.javaland.eu/1/javaland-2015/[JavaLand]. But even though, with so many people around, any place feels small sometimes. There were sessions extremely packed, with people sitting on the floor.
+
+The meals were served in different rooms, but it was a bit uncomfortable to eat it sitting without tables.
+
+As for the city, I didn't have time to do tourism, but the old town of Krakow and nearby streets looked great.
+
+== The organisation
+
+One does not simply organise a conference for 1,500+ people. It's not an easy job, and the people of GeeCON did extremely well. Everything ran smoothly and on a timely manner. On the other hand, there was one official party for everybody and 3 speaker dinners! I've never been in a conference taking care of the speakers every night. And not only that, for the spent that spent the post-weekend in Krakow, they organised a tourism trip!
+
+== The sessions
+
+With 5 tracks, there was a lot of content, but I will highlight the following ones:
+
+* http://2015.geecon.org/speakers/info.html?id=32[3 things you must know to think reactive], by http://manuel.bernhardt.io/[Manuel Bernhardt]. A nice introduction to the core concepts of functional programming and reactive applications.
+* http://2015.geecon.org/speakers/info.html?id=52[G1 garbage collector: details and tunning], by http://bordet.blogspot.com/[Simone Bordet]. A comprehensive explanation of why G1 is a better algorithm for GC in most of the applications, and how it differs from the classical CMS.
+* http://2015.geecon.org/speakers/info.html?id=52[Scale your web applications with Servlet 3.1 Async I/O], by http://bordet.blogspot.com/[Simone Bordet]. It was very useful for me to understand that, although the Servlet API is catching up with modern approaches like Netty, it still needs time to get there. So it might be an option for applications already using the Servlet API, but definitely not for high performance applications where you would a totally async framework like Vert.x or Ratpack.
+* http://2015.geecon.org/speakers/info.html?id=81[State of the art JVM networking with Netty], by http://nitschinger.at/[Michael Nitschinger]. A good overview on some Netty internals.
+* http://2015.geecon.org/speakers/info.html?id=18[Stick to the rules! Consumer driven contracts], by http://toomuchcoding.blogspot.com/[Marcin Grzejszczak] and http://www.kubrynski.com/[Jakub Kubrynski]. This guys totally nailed it with a live coding session using https://github.com/Codearte/accurest[Accurest]. Very cool stuff.
+* http://2015.geecon.org/speakers/info.html?id=26[Building fault tolerant apps with Cassandra], by http://christopher-batey.blogspot.com/[Christopher Batey]. A useful introduction about how Cassandra works and what can it be useful for.
