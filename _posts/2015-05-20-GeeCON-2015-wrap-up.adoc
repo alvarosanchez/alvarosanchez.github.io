@@ -1,0 +1,5 @@
+= #GeeCON 2015 wrap up
+
+:hp-tags: Conferences, GeeCON
+
+image::geecon.jpg[]
