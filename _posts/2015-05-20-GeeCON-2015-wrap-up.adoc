@@ -2,7 +2,7 @@
 
 :hp-tags: Conferences, GeeCON
 
-image::geecon.jpg[width="000"]
+image::geecon.jpg[width="600"]
 
 Last week I had the pleasure to speak at and attend to the amazing http://2015.geecon.org/[GeeCON 2015] in Krakow, Poland.
 
@@ -21,7 +21,7 @@ As for the city, I didn't have time to do tourism, but the old town of Krakow an
 
 == The organisation
 
-One does not simply organise a conference for 1,500+ people. It's not an easy job, and the people of GeeCON did extremely well. Everything ran smoothly and on a timely manner. On the other hand, there was one official party for everybody and 3 speaker dinners! I've never been in a conference taking care of the speakers every night. And not only that, for the spent that spent the post-weekend in Krakow, they organised a tourism trip!
+One does not simply organise a conference for 1,500+ people. It's not an easy job, and the GeeCON crew did extremely well. Everything ran smoothly and on a timely manner. On the other hand, there was one official party for everybody and 3 speaker dinners! I've never been in a conference taking care of the speakers every night. And not only that, for the spent that spent the post-weekend in Krakow, they organised a tourism trip!
 
 == The sessions
 
@@ -33,3 +33,16 @@ With 5 tracks, there was a lot of content, but I will highlight the following on
 * http://2015.geecon.org/speakers/info.html?id=81[State of the art JVM networking with Netty], by http://nitschinger.at/[Michael Nitschinger]. A good overview on some Netty internals.
 * http://2015.geecon.org/speakers/info.html?id=18[Stick to the rules! Consumer driven contracts], by http://toomuchcoding.blogspot.com/[Marcin Grzejszczak] and http://www.kubrynski.com/[Jakub Kubrynski]. This guys totally nailed it with a live coding session using https://github.com/Codearte/accurest[Accurest]. Very cool stuff.
 * http://2015.geecon.org/speakers/info.html?id=26[Building fault tolerant apps with Cassandra], by http://christopher-batey.blogspot.com/[Christopher Batey]. A useful introduction about how Cassandra works and what can it be useful for.
+
+== My talk: Ratpack 101
+
+++++
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/nyJGpzxiYRw3lK" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/alvarosanchezmariscal/ratpack-101-geecon-2015" title="Ratpack 101 - GeeCON 2015" target="_blank">Ratpack 101 - GeeCON 2015</a> </strong> from <strong><a href="//www.slideshare.net/alvarosanchezmariscal" target="_blank">Álvaro Sánchez-Mariscal</a></strong> </div>
+++++
+
+I spoke about http://ratpack.io/[Ratpack]. The content is available already on GitHub and Slideshare:
+
+++++
+<blockquote class="twitter-tweet" data-cards="hidden" lang="es"><p lang="en" dir="ltr">My talk at <a href="https://twitter.com/hashtag/GeeCON?src=hash">#GeeCON</a> about <a href="https://twitter.com/ratpackweb">@ratpackweb</a> | Slides: <a href="http://t.co/qV9WT8DOXI">http://t.co/qV9WT8DOXI</a> | Code: <a href="http://t.co/WPAFx7AWbw">http://t.co/WPAFx7AWbw</a> | Workshop: <a href="http://t.co/vPGzJ2Bf4x">http://t.co/vPGzJ2Bf4x</a></p>&mdash; Álvaro Sánchez (@alvaro_sanchez) <a href="https://twitter.com/alvaro_sanchez/status/599178631827587072">Mayo 15, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+++++
