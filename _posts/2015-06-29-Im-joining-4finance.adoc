@@ -1,3 +1,8 @@
 = I'm joining 4finance!
 :hp-tags: Personal
 
+image::4finance.png[]
+
+After 2.5 years working at https://www.odobo.com/[Odobo], I felt like needing a change in my career. Fortunately, http://www.4finance.com/[4finance] got on my way and we fell in love with each other. As a result, I'm happily joining the team starting from August 2015.
+
+With 800+ employees and offices in 12 countries, 4finance group it's a major player in the micro-loans business. In terms of technology, they have a https://github.com/4finance[true commitment with open source development] and invest in knowledge sharing through events (internal and external) and conferences. People knowing me will realise that it's a 100% match with my core values.
