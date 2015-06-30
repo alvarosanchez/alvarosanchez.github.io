@@ -3,6 +3,19 @@
 
 image::4finance.png[]
 
-After 2.5 years working at https://www.odobo.com/[Odobo], I felt like needing a change in my career. Fortunately, http://www.4finance.com/[4finance] got on my way and we fell in love with each other. As a result, I'm happily joining the team starting from August 2015.
+After 2.5 years working at https://www.odobo.com/[Odobo], I felt like needing a change in my career. Fortunately, http://www.4finance.com/[4finance] got on my way and we fell in love with each other. As a result, I'm happily joining the team starting from August 2015, based in Madrid.
 
-With 800+ employees and offices in 12 countries, 4finance group it's a major player in the micro-loans business. In terms of technology, they have a https://github.com/4finance[true commitment with open source development] and invest in knowledge sharing through events (internal and external) and conferences. People knowing me will realise that it's a 100% match with my core values.
+With 800+ employees and offices in 12 countries, 4finance group it's a major player in the micro-loans business. In terms of technology, http://www.4financeit.com/[4finance IT] (the IT branch) have a https://github.com/4finance[true commitment with open source development] and they invest in knowledge sharing through events (internal and external) and conferences. People knowing me will realise that it's a 100% match with my core values.
+
+It has been also important for me to make the decision to know that people I respect is working there, like http://toomuchcoding.blogspot.com/[Marcin Grzejszczak]. Apart from having an insane 11-letter-but-2-vowels last name, Marcin captured my attention long time ago:
+
+++++
+<blockquote class="twitter-tweet" lang="es"><p lang="en" dir="ltr">I have to say that <a href="https://twitter.com/MGrzejszczak">@MGrzejszczak</a>&#39;s demo on <a href="https://twitter.com/hashtag/groovylang?src=hash">#groovylang</a> microservices is absolutely amazing: <a href="https://t.co/4Ka0OVGBmA">https://t.co/4Ka0OVGBmA</a></p>&mdash; Álvaro Sánchez (@alvaro_sanchez) <a href="https://twitter.com/alvaro_sanchez/status/514758335783251968">septiembre 24, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+++++
+
+That led me to discover the awesome https://github.com/4finance/micro-infra-spring[micro-infra-spring] library and all the good stuff they've done with Spring Boot and microservices. The job they've done it's so amazing that some features are being https://github.com/spring-cloud-incubator/spring-cloud-sleuth/pull/1[ported] to https://github.com/spring-cloud/spring-cloud-zookeeper/pull/2[Spring Cloud]!
+
+So my mission joining the company is to help the team to put 4finance as one of the top IT companies in the microservices/Spring Boot/Groovy ecosystem.
+
+I have to publicly express my gratitude to Odobo, as working with them has been a pleasure for me, and they have done everything they could to make my experience as smooth as possible.
