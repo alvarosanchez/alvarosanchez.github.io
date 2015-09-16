@@ -1,0 +1,12 @@
+= JavaZone 2015 wrap-up
+:hp-tags: Conferences, JavaZone
+
+Last week I had the pleasure to speak at http://2015.javazone.no/[JavaZone 2015]. Despite of having spoken on 20+ conferences across 7 countries, this one has probably been the best experience I've ever had.
+
+JavaZone is a pretty unique conference, and in my personal opinion, this is why:
+
+* Apart from the regular sessions, it had *live shows* during the opening and closing of the first day. Special mention to the party ("AweZone"), with concerts from Norwegian artists. Having the party on the very same venue is very convenient too.
+* The *overflow area* is a special room where all the sessions are displayed in a multichannel grid. Then you can grab a headset and tune the audio for the talk you are interested into. This is incredibly useful in 2 situations: when you don't find a place in an overcrowded session, or when you are unsure to which talk you want to attend. You can start watching one, and if you don't like it, just switch to another one.
+* And the *content*, of course.
+
+The are other aspects that, although not unique for a conference, were of very high quality, such as the content
