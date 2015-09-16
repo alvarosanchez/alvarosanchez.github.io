@@ -4,7 +4,7 @@
 Last week I had the pleasure to represent http://www.4financeit.com[4finance IT] speaking at http://2015.javazone.no/[JavaZone 2015]. Despite of having spoken on 20+ conferences across 7 countries, this one has probably been the best experience I've ever had.
 
 .A picture of my room moments before my talk
-image::javazone.jpg[My session, 800]
+image::javazone.jpg[My session, 600]
 
 JavaZone is a pretty unique conference, and in my personal opinion, this is why:
 
@@ -21,7 +21,7 @@ One of the things that impressed me more was the fact that Norway, with 5M+ peop
 Not only that. Norway is that country where Accenture and Cap Gemini are cool companies, sponsoring a Java conference, with booths full of gadgets and employees wearing company's t-shirts:
 
 .Have a look at Accenture's huge booth in the top right
-image::http://2015.javazone.no/assets/img/memories/jz-slides2015_6_oversikt.jpg[JavaZone expo area, 800]
+image::http://2015.javazone.no/assets/img/memories/jz-slides2015_6_oversikt.jpg[JavaZone expo area, 600]
 
 Yet again compared with the Spanish branches of such companies, looks like they are from a different planet.
 
