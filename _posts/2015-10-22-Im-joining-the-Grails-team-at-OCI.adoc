@@ -1,0 +1,12 @@
+= I'm joining the Grails team at OCI!
+:hp-tags: Personal
+
+3 months ago https://alvarosanchez.github.io/2015/06/29/Im-joining-4finance.html[I made public] my new professional adventure, by joining a promising _fintech_ company. However, once I arrived there, the situation was quite different than it was months before, when we made the agreements. In respect of the employees that still work there, customers and stakeholders, I won't share publicly my reasons to quit. I've had a lot of fun working together with extremely brilliant developers, and I will keep good memories, but what it's done, it's done.
+
+image::http://www.ociweb.com/files/1414/3024/2447/logo-circle.png[OCI Logo, 200]
+
+Having said that, I'm really happy that http://www.ociweb.com/[Object Computing, Inc (OCI)] got in my way, and as of November I will join the company as a member of the Grails development team! My engagements will include both open source development on Grails (core and plugins), as well as client projects development. That way one does not lose contact with the feeling of writing real Grails applications.
+
+After having been using Grails for so many years and having pioneered by being the first one using it in Spain, it's more than a pleasure for me to join the company where https://twitter.com/graemerocher[Graeme Rocher] or https://twitter.com/jeffscottbrown[Jeff Brown] are working, and to be paid to contribute to the framework. 
+
+But I also honestly think this is great news for the Grails community too. First of all, because it demonstrates OCI's clear commitment with the support of the framework. Secondly, because it assures the support of my plugins (specifically, http://alvarosanchez.github.io/grails-spring-security-rest[Spring Security REST]). And finally, because those 2 areas (REST and security) will be improved with my contributions across the upcoming versions of Grails 3.
