@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Roadmap of Spring Security plugins for Grails</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//alvarosanchez.github.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//alvarosanchez.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html" />
+    
+    <meta property="og:site_name" content="Learning from life" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Roadmap of Spring Security plugins for Grails" />
+    <meta property="og:description" content="Since I joined OCI I been helping to move forward with the Spring Security plugins for Grails. I was obviously already doing it with my Spring Security REST, and now I also have some bandwith to help with Spring Security..." />
+    <meta property="og:url" content="https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html" />
+    <meta property="article:published_time" content="2015-11-19T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-11-20T14:25:34.098Z" />
+    <meta property="article:tag" content="Grails" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Roadmap of Spring Security plugins for Grails" />
+    <meta name="twitter:description" content="Since I joined OCI I been helping to move forward with the Spring Security plugins for Grails. I was obviously already doing it with my Spring Security REST, and now I also have some bandwith to help with Spring Security..." />
+    <meta name="twitter:url" content="https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Learning from life",
+    "author": {
+        "@type": "Person",
+        "name": "Álvaro Sánchez-Mariscal",
+        "image": "https://avatars.githubusercontent.com/u/153880?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "https://es.linkedin.com/in/mariscal"
+    },
+    "headline": "Roadmap of Spring Security plugins for Grails",
+    "url": "https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html",
+    "datePublished": "2015-11-19T23:00:00.000Z",
+    "dateModified": "2015-11-20T14:25:34.098Z",
+    "keywords": "Grails",
+    "description": "Since I joined OCI I been helping to move forward with the Spring Security plugins for Grails. I was obviously already doing it with my Spring Security REST, and now I also have some bandwith to help with Spring Security..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Learning from life" href="https://alvarosanchez.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-Grails">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://alvarosanchez.github.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://alvarosanchez.github.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-Grails">
+
+        <header class="post-header">
+            <h1 class="post-title">Roadmap of Spring Security plugins for Grails</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-11-20">20 November 2015</time>  on <a href="https://alvarosanchez.github.io/tag/Grails">Grails</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since <a href="https://alvarosanchez.github.io/2015/10/22/Im-joining-the-Grails-team-at-OCI.html">I joined OCI</a> I been helping to move forward with the Spring Security plugins for Grails. I was obviously already doing it with my <a href="http://alvarosanchez.github.io/grails-spring-security-rest/">Spring Security REST</a>, and now I also have some bandwith to help with <a href="http://grails.org/plugin/spring-security-core">Spring Security Core</a>.</p>
+</div>
+<div class="paragraph">
+<p>Here are the plans that <a href="https://twitter.com/burtbeckwith">Burt</a> and I have for both plugins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spring_security_core">Spring Security Core</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_for_grails_2_x">For Grails 2.x</h3>
+<div class="paragraph">
+<p>The situation is a bit weird here, as the plugin has been in a release candidate state for 2 years. This obviously doesn&#8217;t reflect the maturity and stability of the plugin, as we all can imagine of hundreds of applications using it in production without issues.</p>
+</div>
+<div class="paragraph">
+<p>The problem, however, is that with a so long release cycle, new Grails versions arrived in the middle with new features, such as namespaced controllers or the <code>@Resource</code> AST transformation. And the plugin has had to support them. But don&#8217;t worry, we are about to close the gap :).</p>
+</div>
+<div class="paragraph">
+<p><code>spring-security-core:2.0-RC6</code> has been released this week, and it should become 2.0 GA by the end of November / beginning of December. Note that once that 2.0 GA is out, 1.x version will be deprecated and unsupported.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_grails_3_x">For Grails 3.x</h3>
+<div class="paragraph">
+<p>A <code>3.0.0.M1</code> version has been out there for a while already. While the plugin mostly works, our current effort is to make the build process as awesome as it was in the previous version. And this is a tedious work due to all the incredibly good tests and testing apps that Burt created over the years. Ideally, we should have a stable release before the end of the year, but&#8230;&#8203; time will tell :).</p>
+</div>
+<div class="paragraph">
+<p>Note that the current supported version of Spring Security is 3.2.x. However, Grails 3.1 will bring Spring Boot 1.3.0, which will force us to upgrade to Spring Security 4.0. That change is not an easy one, as there are API changes. It will keep us busy during the first weeks of 2016.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spring_security_rest">Spring Security REST</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_for_grails_2_x_2">For Grails 2.x</h3>
+<div class="paragraph">
+<p><code>1.5.3</code> has been released today, and I have no plans to include new features, just bug fixes. The plugin is known to be working well for Grails 2 apps, and I&#8217;d like to have my efforts focused on Grails 3 now.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_grails_3_x_2">For Grails 3.x</h3>
+<div class="paragraph">
+<p>Grails 3 support is the #1 request I get over GitHub or Twitter. I already confirmed some time ago that the plugin will be upgraded, however I couldn&#8217;t find the time to do it. But now, thanks to <a href="http://www.ociweb.com/">OCI</a>, I will definitely work on it.</p>
+</div>
+<div class="paragraph">
+<p>For Grails 3 I will probably work in a new project from scratch, cherry picking some code from the old version when necessary. I want to revisit the design decisions I took 2 years ago, and first of all, have a multi-project build where many features (like Memcached, Redis, CAS, etc) will be in optional artifacts. A first milestone should be out there before the end of this year.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_disclaimer">Disclaimer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All the ETA&#8217;s provided here are just my own guestimates. Not everything depends on me, and we all know how open source works and also that shit happens, so please consider the deadlines accordingly.</p>
+</div>
+<div class="paragraph">
+<p>And of course, any help here is highly appreciated. From documentation, to reproducing issues, any Grails developer should be able to contribute.</p>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/153880?v=3)"><span class="hidden">Álvaro Sánchez-Mariscal's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Álvaro Sánchez-Mariscal</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Madrid</span>
+                    <span class="author-link icon-link"><a href="https://es.linkedin.com/in/mariscal">https://es.linkedin.com/in/mariscal</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Roadmap%20of%20Spring%20Security%20plugins%20for%20Grails&amp;url=https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'learningfromlife'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://alvarosanchez.github.io">Learning from life</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alvarosanchez.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//alvarosanchez.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62582640-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
