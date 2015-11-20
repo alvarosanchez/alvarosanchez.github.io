@@ -5,10 +5,19 @@
     <link>https://alvarosanchez.github.io</link>
     <description>A blog by Álvaro Sánchez-Mariscal</description>
     <language>en-UK</language>
-    <pubDate>Thu, 22 Oct 2015 10:28:39 GMT</pubDate>
+    <pubDate>Fri, 20 Nov 2015 14:26:34 GMT</pubDate>
     <dc:creator>alvaro.sanchezmariscal@gmail.com</dc:creator>
-    <dc:date>2015-10-22T10:28:39Z</dc:date>
+    <dc:date>2015-11-20T14:26:34Z</dc:date>
     <dc:language>en-UK</dc:language>
+    <item>
+      <title>Roadmap of Spring Security plugins for Grails</title>
+      <link>https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html</link>
+      <description>Since I joined OCI I been helping to move forward with the Spring Security plugins for Grails. I was obviously already doing it with my Spring Security REST, and now I also have some bandwith to help with Spring Security...</description>
+      <category>Grails</category>
+      <pubDate>Fri, 20 Nov 2015 16:25:34 GMT</pubDate>
+      <guid>https://alvarosanchez.github.io/2015/11/20/Roadmap-of-Spring-Security-plugins-for-Grails.html</guid>
+      <dc:date>2015-11-20T16:25:34Z</dc:date>
+    </item>
     <item>
       <title>I'm joining the Grails team at OCI!</title>
       <link>https://alvarosanchez.github.io/2015/10/22/Im-joining-the-Grails-team-at-OCI.html</link>
