@@ -1,0 +1,40 @@
+= Roadmap of Spring Security plugins for Grails
+:hp-tags: Grails
+
+Since https://alvarosanchez.github.io/2015/10/22/Im-joining-the-Grails-team-at-OCI.html[I joined OCI] I been helping to move forward with the Spring Security plugins for Grails. I was obviously already doing it with my http://alvarosanchez.github.io/grails-spring-security-rest/[Spring Security REST], and now I also have some bandwith to help with http://grails.org/plugin/spring-security-core[Spring Security Core].
+
+Here are the plans that https://twitter.com/burtbeckwith[Burt] and I have for both plugins.
+
+== Spring Security Core
+
+=== For Grails 2.x
+
+The situation is a bit weird here, as the plugin has been in a release candidate state for 2 years. This obviously doesn't reflect the maturity and stability of the plugin, as we all can imagine of hundreds of applications using it in production without issues.
+
+The problem, however, is that with a so long release cycle, new Grails versions arrived in the middle with new features, such as namespaced controllers or the `@Resource` AST transformation. And the plugin has had to support them. But don't worry, we are about to close the gap :).
+
+`spring-security-core:2.0-RC6` has been released this week, and it should become 2.0 GA by the end of November / beginning of December. Note that once that 2.0 GA is out, 1.x version will be deprecated and unsupported.
+
+=== For Grails 3.x
+
+A `3.0.0.M1` version has been out there for a while already. While the plugin mostly works, our current effort is to make the build process as awesome as it was in the previous version. And this is a tedious work due to all the incredibly good tests and testing apps that Burt created over the years. Ideally, we should have a stable release before the end of the year, but... time will tell :).
+
+Note that the current supported version of Spring Security is 3.2.x. However, Grails 3.1 will bring Spring Boot 1.3.0, which will force us to upgrade to Spring Security 4.0. That change is not an easy one, as there are API changes. It will keep us busy during the first weeks of 2016.
+
+== Spring Security REST
+
+=== For Grails 2.x
+
+`1.5.3` has been released today, and I have no plans to include new features, just bug fixes. The plugin is known to be working well for Grails 2 apps, and I'd like to have my efforts focused on Grails 3 now.
+
+=== For Grails 3.x
+
+Grails 3 support is the #1 request I get over GitHub or Twitter. I already confirmed some time ago that the plugin will be upgraded, however I couldn't find the time to do it. But now, thanks to http://www.ociweb.com/[OCI], I will definitely work on it.
+
+For Grails 3 I will probably work in a new project from scratch, cherry picking some code from the old version when necessary. I want to revisit the design decisions I took 2 years ago, and first of all, have a multi-project build where many features (like Memcached, Redis, CAS, etc) will be in optional artifacts. A first milestone should be out there before the end of this year.
+
+== Disclaimer
+
+All the ETA's provided here are just my own guestimates. Not everything depends on me, and we all know how open source works and also that shit happens, so please consider the deadlines accordingly.
+
+And of course, any help here is highly appreciated. From documentation, to reproducing issues, any Grails developer should be able to contribute.
